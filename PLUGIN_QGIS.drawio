@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="r3qg68lPNj7m7SNYJUBA">
+    <mxGraphModel dx="1373" dy="1948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-23" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="580" width="580" x="160" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;Analyse Informatique du&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;h3 id=&quot;plugin-qgis-de-calcul-disochrones-geomatique-difficulte&quot;&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;Plugin QGIS de calcul d&#39;isochrones&lt;/font&gt;&lt;/h3&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;&amp;nbsp;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="450" x="219" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-2" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="Diagramme de Cas d&#39;Utilisation " vertex="1">
+          <mxGeometry height="40" width="411" x="219" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Actor" vertex="1">
+          <mxGeometry height="165" width="90" x="20" y="292.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Sélectionner un point de départ ou d&#39;arriver" vertex="1">
+          <mxGeometry height="60" width="157.5" x="222.5" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Configurer les&amp;nbsp; paramètres de calcul" vertex="1">
+          <mxGeometry height="60" width="157.5" x="256" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Entrer le temps de trajet" vertex="1">
+          <mxGeometry height="40" width="150" x="500" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Sélectionner le Type de transport" vertex="1">
+          <mxGeometry height="50" width="140" x="490" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Lancer le calcul" vertex="1">
+          <mxGeometry height="50" width="157.5" x="222.5" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;span&gt;&lt;span&gt;exporter la surface(zone) géo-localisée&lt;/span&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="170" x="480" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-16" edge="1" parent="1" source="qG9qx4_zCU5iz8h2h3J_-15" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" target="qG9qx4_zCU5iz8h2h3J_-14" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="340" y="525" as="sourcePoint" />
+            <mxPoint x="500" y="525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-21" edge="1" parent="1" source="qG9qx4_zCU5iz8h2h3J_-7" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="qG9qx4_zCU5iz8h2h3J_-8" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="280" y="355" as="sourcePoint" />
+            <mxPoint x="440" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-22" edge="1" parent="1" source="qG9qx4_zCU5iz8h2h3J_-7" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.943;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;" target="qG9qx4_zCU5iz8h2h3J_-10" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="390" y="395" as="sourcePoint" />
+            <mxPoint x="460" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-24" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.067;entryY=0.783;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG9qx4_zCU5iz8h2h3J_-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="110" y="360" as="sourcePoint" />
+            <mxPoint x="160" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-26" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.032;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG9qx4_zCU5iz8h2h3J_-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="130" y="390" as="sourcePoint" />
+            <mxPoint x="273" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-27" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.073;entryY=0.18;entryDx=0;entryDy=0;entryPerimeter=0;" target="qG9qx4_zCU5iz8h2h3J_-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="130" y="410" as="sourcePoint" />
+            <mxPoint x="220" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-28" parent="1" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;h3 id=&quot;plugin-qgis-de-calcul-disochrones-geomatique-difficulte&quot;&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;Plugin QGIS de calcul d&#39;isochrones&lt;/font&gt;&lt;/h3&gt;" vertex="1">
+          <mxGeometry height="30" width="290" x="160" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-29" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Ouvrir la carte" vertex="1">
+          <mxGeometry height="40" width="150" x="480" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-30" edge="1" parent="1" source="qG9qx4_zCU5iz8h2h3J_-6" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;" target="qG9qx4_zCU5iz8h2h3J_-29" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="494" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
