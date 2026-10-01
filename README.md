@@ -1,2 +1,2 @@
 # Poo_Projet_Atac
-Projet de developpement informatique POO pour se former
+Je travail sur un projet de plugin d'isochrone sous QGIS qui est un outil qui permet de calculer et d'afficher sur une carte toutes les zones géographiques accessibles à partir d'un point de départ en un temps donné (isochrone).
