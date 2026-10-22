@@ -20,10 +20,10 @@
           <mxGeometry height="90" width="194.5" x="240" y="400" as="geometry" />
         </mxCell>
         <mxCell id="qG9qx4_zCU5iz8h2h3J_-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Définir le coût(type(dist,time), valeur)" vertex="1">
-          <mxGeometry height="70" width="157.5" x="519" y="340" as="geometry" />
+          <mxGeometry height="70" width="157.5" x="519" y="330" as="geometry" />
         </mxCell>
         <mxCell id="qG9qx4_zCU5iz8h2h3J_-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Charger les valeurs(GetCapabilities)" vertex="1">
-          <mxGeometry height="80" width="200" x="510" y="431.25" as="geometry" />
+          <mxGeometry height="80" width="200" x="519" y="420" as="geometry" />
         </mxCell>
         <mxCell id="qG9qx4_zCU5iz8h2h3J_-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Lancer le calcul" vertex="1">
           <mxGeometry height="100" width="177.5" x="190" y="680" as="geometry" />
