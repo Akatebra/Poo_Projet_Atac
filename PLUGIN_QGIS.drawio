@@ -61,7 +61,7 @@
             <mxPoint x="220" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qG9qx4_zCU5iz8h2h3J_-28" parent="1" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;h3 id=&quot;plugin-qgis-de-calcul-disochrones-geomatique-difficulte&quot;&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;Plugin QGIS de calcul d&#39;isochrones&lt;/font&gt;&lt;/h3&gt;" vertex="1">
+        <mxCell id="qG9qx4_zCU5iz8h2h3J_-28" parent="1" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;h3 id=&quot;plugin-qgis-de-calcul-disochrones-geomatique-difficulte&quot;&gt;&lt;font face=&quot;Garamond&quot; style=&quot;font-size: 18px;&quot;&gt;Plugin QGIS&amp;nbsp;&lt;/font&gt;&lt;/h3&gt;" vertex="1">
           <mxGeometry height="30" width="290" x="160" y="170" as="geometry" />
         </mxCell>
         <mxCell id="qI3UDfIb7xQhFuBASnfn-1" edge="1" parent="1" source="qG9qx4_zCU5iz8h2h3J_-7" style="edgeStyle=none;html=1;startArrow=open;endArrow=none;startSize=12;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="qG9qx4_zCU5iz8h2h3J_-15" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
