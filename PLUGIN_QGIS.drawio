@@ -239,7 +239,7 @@
           <mxGeometry height="630" width="100" x="415" y="2090" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-13" parent="uQwJwRQ3eyF9hyYzOZXa-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="500" width="10" x="45" y="120" as="geometry" />
+          <mxGeometry height="500" width="10" x="45" y="130" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" value="" vertex="1">
           <mxGeometry height="620" width="20" x="195" y="2090" as="geometry" />
@@ -248,10 +248,16 @@
           <mxGeometry height="500" width="10" x="5" y="80" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":ClientGeoplateforme" vertex="1">
-          <mxGeometry height="620" width="123" x="682" y="2090" as="geometry" />
+          <mxGeometry height="670" width="123" x="682" y="2090" as="geometry" />
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-15" parent="uQwJwRQ3eyF9hyYzOZXa-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="500" width="10" x="56.5" y="170" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":ServiceGeoplateforme" vertex="1">
           <mxGeometry height="620" width="140" x="925" y="2090" as="geometry" />
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-16" parent="uQwJwRQ3eyF9hyYzOZXa-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="70" width="10" x="65" y="248" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="User" vertex="1">
           <mxGeometry height="30" width="60" x="175" y="2120" as="geometry" />
@@ -262,7 +268,7 @@
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=": CarteQGIS" vertex="1">
           <mxGeometry height="620" width="140" x="1480" y="2080" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-8" edge="1" parent="1" source="uQwJwRQ3eyF9hyYzOZXa-12" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-13" value="Ouvre le plugin">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-8" edge="1" parent="1" source="uQwJwRQ3eyF9hyYzOZXa-12" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-13" value="">
           <mxGeometry relative="1" width="80" x="0.368" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
@@ -272,28 +278,51 @@
             <mxPoint x="350" y="2220" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-3" value="getCapabilities()">
-          <mxGeometry relative="1" width="80" x="0.2894" as="geometry">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-15" value="getCapabilities()">
+          <mxGeometry relative="1" width="80" x="0.311" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="606.4999999999998" y="2280" />
+              <mxPoint x="606.4999999999998" y="2260" />
             </Array>
-            <mxPoint x="470" y="2280" as="sourcePoint" />
-            <mxPoint x="730" y="2280" as="targetPoint" />
+            <mxPoint x="470" y="2260" as="sourcePoint" />
+            <mxPoint x="730" y="2260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-10" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-4" value="">
-          <mxGeometry relative="1" width="80" x="0.4024" as="geometry">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-10" edge="1" parent="1" source="uQwJwRQ3eyF9hyYzOZXa-15" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-4" value="">
+          <mxGeometry relative="1" width="80" x="0.3902" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="869.0000000000002" y="2360" />
+              <mxPoint x="869.5" y="2338" />
             </Array>
-            <mxPoint x="743.5" y="2360" as="sourcePoint" />
-            <mxPoint x="1016.5" y="2360" as="targetPoint" />
+            <mxPoint x="744.5" y="2338" as="sourcePoint" />
+            <mxPoint x="1017.5" y="2338" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 14px; white-space: nowrap;&quot;&gt;Demande des champs de valeurs&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="60" x="840" y="2338" as="geometry" />
+          <mxGeometry height="30" width="60" x="840" y="2308" as="geometry" />
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Ouvre le plugin&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="310" y="2190" as="geometry" />
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-15" value="">
+          <mxGeometry relative="1" x="-0.6687" as="geometry">
+            <Array as="points" />
+            <mxPoint x="990" y="2410" as="sourcePoint" />
+            <mxPoint x="910" y="2410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;parametres: profifs, unites,valeur...&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="226.5" x="756.75" y="2385" as="geometry" />
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-13" value="">
+          <mxGeometry relative="1" x="-0.702" as="geometry">
+            <Array as="points" />
+            <mxPoint x="738.5" y="2470" as="sourcePoint" />
+            <mxPoint x="658.5" y="2470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Liste des champs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="529" y="2440" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
