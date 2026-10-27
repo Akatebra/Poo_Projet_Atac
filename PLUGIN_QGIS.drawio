@@ -235,37 +235,40 @@
         <mxCell id="u9ccO0-7WGmbTjph8nYX-1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Diagramme de&amp;nbsp; sequence" vertex="1">
           <mxGeometry height="40" width="411" x="674.5" y="1940" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":FenetrePlugin" vertex="1">
-          <mxGeometry height="630" width="100" x="415" y="2090" as="geometry" />
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=light-dark(#212121, #996500);strokeWidth=2;" value=":FenetrePlugin" vertex="1">
+          <mxGeometry height="550" width="100" x="415" y="2090" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-13" parent="uQwJwRQ3eyF9hyYzOZXa-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="500" width="10" x="45" y="130" as="geometry" />
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-13" parent="uQwJwRQ3eyF9hyYzOZXa-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#eeeeee;strokeColor=#36393d;" value="" vertex="1">
+          <mxGeometry height="250" width="10" x="45" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="V_unQ-Mkkkevuj-J9HES-7" parent="uQwJwRQ3eyF9hyYzOZXa-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="45" y="480" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" value="" vertex="1">
           <mxGeometry height="620" width="20" x="195" y="2090" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-12" parent="uQwJwRQ3eyF9hyYzOZXa-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-12" parent="uQwJwRQ3eyF9hyYzOZXa-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};strokeWidth=2;fillColor=#eeeeee;strokeColor=#36393d;" value="" vertex="1">
           <mxGeometry height="500" width="10" x="5" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":ClientGeoplateforme" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=light-dark(#181616, #996500);strokeWidth=2;" value=":ClientGeoplateforme" vertex="1">
           <mxGeometry height="670" width="123" x="682" y="2090" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-15" parent="uQwJwRQ3eyF9hyYzOZXa-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-15" parent="uQwJwRQ3eyF9hyYzOZXa-3" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#eeeeee;strokeColor=#36393d;" value="" vertex="1">
           <mxGeometry height="210" width="10" x="56.5" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":ServiceGeoplateforme" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=light-dark(#181816, #996500);strokeWidth=2;" value=":ServiceGeoplateforme" vertex="1">
           <mxGeometry height="620" width="140" x="925" y="2090" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-16" parent="uQwJwRQ3eyF9hyYzOZXa-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-16" parent="uQwJwRQ3eyF9hyYzOZXa-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#eeeeee;strokeColor=#36393d;" value="" vertex="1">
           <mxGeometry height="70" width="10" x="65" y="248" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="User" vertex="1">
           <mxGeometry height="30" width="60" x="175" y="2120" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=": ResultatIsochrone" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=light-dark(#1b1a18, #996500);strokeWidth=2;" value=": ResultatIsochrone" vertex="1">
           <mxGeometry height="620" width="140" x="1203" y="2080" as="geometry" />
         </mxCell>
-        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=": CarteQGIS" vertex="1">
+        <mxCell id="uQwJwRQ3eyF9hyYzOZXa-7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=light-dark(#1d1d1b, #996500);strokeWidth=2;" value=": CarteQGIS" vertex="1">
           <mxGeometry height="620" width="140" x="1480" y="2080" as="geometry" />
         </mxCell>
         <mxCell id="uQwJwRQ3eyF9hyYzOZXa-8" edge="1" parent="1" source="uQwJwRQ3eyF9hyYzOZXa-12" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-13" value="">
@@ -327,15 +330,17 @@
         <mxCell id="V_unQ-Mkkkevuj-J9HES-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;white-space: nowrap;&quot;&gt;&lt;font style=&quot;&quot;&gt;getCapabilities&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;white-space: nowrap;&quot;&gt;()&lt;/span&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="160" x="529" y="2230" as="geometry" />
         </mxCell>
-        <mxCell id="V_unQ-Mkkkevuj-J9HES-4" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="uQwJwRQ3eyF9hyYzOZXa-13" value="">
-          <mxGeometry relative="1" width="80" x="-0.68" as="geometry">
-            <Array as="points" />
+        <mxCell id="V_unQ-Mkkkevuj-J9HES-4" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;defaultLabelBackgroundColor=page;" target="V_unQ-Mkkkevuj-J9HES-7" value="">
+          <mxGeometry relative="1" width="80" x="-0.528" as="geometry">
+            <Array as="points">
+              <mxPoint x="268.5" y="2570" />
+            </Array>
             <mxPoint x="210" y="2570" as="sourcePoint" />
             <mxPoint x="290" y="2570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="V_unQ-Mkkkevuj-J9HES-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Choisir_Point() et les parametres&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="205" x="235" y="2540" as="geometry" />
+          <mxGeometry height="30" width="180" x="235" y="2540" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
