@@ -7,8 +7,8 @@ Diagramme de classes
 Diagramme d'activité ou de séquence
 
 Bibliothèques utilisées :
-requests
-PyQt
+requests,
+PyQt,
 PyQGIS
 
 Pour avoir plus d'informations sur les notions, veuillez lire le Wiki, Merci!!!
