@@ -33,6 +33,6 @@ class ParametresIsochrone:
 
 if __name__ == "__main__":
     p = Point(2.337306, 48.849319)
-    params = ParametresIsochrone(point=p, resource="bdtopo-osrm", costValue=30, costType="time", profile= "car", timeUnit="s", crs="EPSG:4326")
+    params = ParametresIsochrone(point=p, resource="bdtopo-osrm", costValue=30, costType="time", profile= "car", timeUnit="second", crs="EPSG:4326")
     print(params.toDict())
     

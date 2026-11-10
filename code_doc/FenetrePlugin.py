@@ -1,16 +1,31 @@
 import sys
 # from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QFormLayout, QLineEdit, QMessageBox
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QFormLayout, QLineEdit, QMessageBox, QComboBox
+import requests
 from Point import Point
+from ParametresIsochrone import ParametresIsochrone
+from ClientGeoplateforme import ClientGeoplateforme
 
 class FenetrePlugin(QWidget):
+    """
+    Classe représentant la fenêtre du plugin QGIS-Isochrone. 
+    Cette fenêtre permet à l'utilisateur de saisir les paramètres nécessaires pour calculer les isochrones.
+    """
     def __init__(self):
+        """
+        Initialise la fenêtre du plugin et configure l'interface utilisateur.
+        """
         super().__init__()
         self.initUI()
 
     def initUI(self):
+        """
+        Configure l'interface utilisateur.
+        Crée les champs de saisie pour les paramètres importants.
+        Crée les boutons pour sélectionner un point et lancer le calcul.
+        """
         self.setWindowTitle("Plugin QGIS-Isochrone")
-        self.resize(600,400)
+        self.resize(800,500)
         self.move(30,200)
 
         layout = QVBoxLayout()
@@ -20,6 +35,15 @@ class FenetrePlugin(QWidget):
         form.addRow("Longitude :", self.lonEdit)
         form.addRow("Latitude :", self.latEdit)
         layout.addLayout(form)
+
+        self.resourceBox = QComboBox()
+        self.resourceBox.addItems(["bdtopo-valhalla", "bdtopo-pgr", "bdtopo-osrm"])
+        self.costTypeBox = QComboBox()
+        self.costTypeBox.addItems(["time", "distance"])
+        self.costValueEdit = QLineEdit()
+        form.addRow("Ressource :", self.resourceBox)
+        form.addRow("Type de coût :", self.costTypeBox)
+        form.addRow("Valeur du coût :", self.costValueEdit)
 
         self.selectButton = QPushButton("Sélectionner un point")
         self.calculateButton = QPushButton("Lancer le calcul")
@@ -33,13 +57,53 @@ class FenetrePlugin(QWidget):
         
 
     def select_point(self):
+       
         print("Point sélectionné")
 
+
     def lancer_calcul(self):
-        lon = float(self.lonEdit.text())
-        lat = float(self.latEdit.text())
-        point: Point[float, float] = Point(lon, lat)
-        print(point.toStr())
+        """
+        Récupère les paramètres saisis par l'utilisateur, 
+        crée un objet Point et un objet ParametresIsochrone, 
+        puis lit les champs, vérifie les valeurs, 
+        lance le calcul d’isochrone et affiche le résultat.
+        """
+        lon_text = self.lonEdit.text()
+        lat_text = self.latEdit.text()
+        costValue_text = self.costValueEdit.text()
+        try:
+            lon = float(lon_text)
+            lat = float(lat_text)
+            costValue = float(costValue_text)
+ 
+        except ValueError:
+            QMessageBox.warning(self, "Erreur", "La longitude, la latitude et la valeur du coût doivent être des nombres.")
+            return
+        
+        if not (-180 <= lon <= 180):
+            QMessageBox.warning(self, "Erreur", "La longitude doit être comprise entre -180 et 180.")
+            return
+        if not (-90 <= lat <= 90):
+            QMessageBox.warning(self, "Erreur", "La latitude doit être comprise entre -90 et 90.")
+            return
+        if costValue <= 0:
+            QMessageBox.warning(self, "Erreur", "La valeur du coût doit être positive.")
+            return
+
+        resource = self.resourceBox.currentText()
+        costType = self.costTypeBox.currentText()
+        point = Point(lon, lat)
+        params = ParametresIsochrone(point=point, resource=resource, costValue=costValue, costType=costType)
+        print(params.toDict())
+
+        try:
+            client = ClientGeoplateforme()
+            resultat = client.calcul_isochrone(params)
+        except requests.exceptions.RequestException as e:
+            QMessageBox.warning(self, "Erreur", f"Le calcul a échoué : {e}")
+            return
+
+        QMessageBox.information(self, "Résultat", f"Isochrone calculée : {resultat.nombre_points()} points.")
 
 if __name__ == "__main__":
     app = QApplication.instance() 
@@ -48,6 +112,3 @@ if __name__ == "__main__":
     fen = FenetrePlugin()
     fen.show()
     app.exec_()
-
-    p = Point(2.337306, 48.849319)
-    print(p.toStr())
