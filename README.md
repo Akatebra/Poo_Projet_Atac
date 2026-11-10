@@ -14,6 +14,7 @@ PyQGIS
 Pour avoir plus d'informations sur les notions, veuillez lire le Wiki, Merci!!!
 
 Ressource sur laquelle je me suis appuyée : https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/calcul-isochrone-isodistance/
+Donc, seules les ressources documentées par l’IGN sont proposées par mon plugin.
 
 Version QGIS utilise: 
 <img width="695" height="368" alt="Version_QGIS" src="https://github.com/user-attachments/assets/f5160f30-4dc0-4e8f-be39-812454fec185" />
