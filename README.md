@@ -16,16 +16,7 @@ Pour avoir plus d'informations sur les notions, veuillez lire le Wiki, Merci!!!
 Ressource sur laquelle je me suis appuyée : https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/calcul-isochrone-isodistance/
 
 Version QGIS utilise: 
-Version de QGIS
-4.2.3-Belém do Pará
-Révision du code
-b041a18904a
- 
-Bibliothèques
-Version de Qt
-6.11.1
-Version de Python
-3.12.14 (Compilé)
-3.12.15 (Running)
+<img width="695" height="368" alt="Version_QGIS" src="https://github.com/user-attachments/assets/f5160f30-4dc0-4e8f-be39-812454fec185" />
+
 
 
