@@ -12,3 +12,5 @@ PyQt,
 PyQGIS
 
 Pour avoir plus d'informations sur les notions, veuillez lire le Wiki, Merci!!!
+
+Ressource sur laquelle je me suis appuyée : https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/calcul-isochrone-isodistance/
