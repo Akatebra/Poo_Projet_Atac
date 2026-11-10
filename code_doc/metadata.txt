@@ -1,0 +1,14 @@
+[general]
+name=Isochrones Géoplateforme
+qgisMinimumVersion=4.0
+supportsQt6=True
+description=Calcule une isochrone avec le service de la Géoplateforme de l'IGN
+about=Ce plugin interroge le service de calcul d'isochrone/isodistance de la Géoplateforme. L'utilisateur saisit ou selectionne un point de départ, une ressource, un type de coût (temps ou distance) et sa valeur. La zone atteignable est affichée sur la carte sous forme de couche.
+version=0.1
+author=Ange-Christelle
+email=ange-christelle.aka@edu.geodata-paris.fr
+category=Web
+tags=python, isochrone, géoplateforme, IGN, accessibilité
+repository=https://github.com/Akatebra/Poo_Projet_Atac
+experimental=True
+changelog=0.1 : première version, calcul d'une isochrone avec les ressources bdtopo-valhalla et bdtopo-pgr.

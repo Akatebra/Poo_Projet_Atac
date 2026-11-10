@@ -1,7 +1,18 @@
 import sys
-# from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QFormLayout, QLineEdit, QMessageBox, QComboBox
-import requests
+import requests  
+
+try:
+    from qgis.core import QgsProject
+except ImportError:
+    QgsProject = None
+
+try:
+    from qgis.PyQt.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
+                                     QFormLayout, QLineEdit, QMessageBox, QComboBox)
+except ImportError:
+    from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
+                                 QFormLayout, QLineEdit, QMessageBox, QComboBox)
+    
 from Point import Point
 from ParametresIsochrone import ParametresIsochrone
 from ClientGeoplateforme import ClientGeoplateforme
@@ -37,10 +48,21 @@ class FenetrePlugin(QWidget):
         layout.addLayout(form)
 
         self.resourceBox = QComboBox()
-        self.resourceBox.addItems(["bdtopo-valhalla", "bdtopo-pgr", "bdtopo-osrm"])
+        try:
+            ressources = ClientGeoplateforme().get_ressources_isochrone()
+        except (requests.exceptions.RequestException, KeyError, ValueError):
+            ressources = ClientGeoplateforme.RESSOURCES_DOCUMENTEES
+        self.resourceBox.addItems(ressources)
+        self.resourceBox.setCurrentText("bdtopo-valhalla")
+       
+
+
+        
         self.costTypeBox = QComboBox()
         self.costTypeBox.addItems(["time", "distance"])
+
         self.costValueEdit = QLineEdit()
+
         form.addRow("Ressource :", self.resourceBox)
         form.addRow("Type de coût :", self.costTypeBox)
         form.addRow("Valeur du coût :", self.costValueEdit)
@@ -99,11 +121,17 @@ class FenetrePlugin(QWidget):
         try:
             client = ClientGeoplateforme()
             resultat = client.calcul_isochrone(params)
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, ValueError) as e:
             QMessageBox.warning(self, "Erreur", f"Le calcul a échoué : {e}")
             return
 
+        if QgsProject is not None:
+            QgsProject.instance().addMapLayer(resultat.creer_couche())
+
         QMessageBox.information(self, "Résultat", f"Isochrone calculée : {resultat.nombre_points()} points.")
+
+         
+
 
 if __name__ == "__main__":
     app = QApplication.instance() 
@@ -111,4 +139,4 @@ if __name__ == "__main__":
         app = QApplication(sys.argv)
     fen = FenetrePlugin()
     fen.show()
-    app.exec_()
+    app.exec()
