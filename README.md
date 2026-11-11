@@ -3,7 +3,8 @@ Plugin QGIS qui interroge le service de calcul d'isochrones / isodistances de la
 
 L'objectif de ce projet est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
 
-Statut : plugin expérimental, développé dans un cadre pédagogique. 
+### Statut : 
+plugin expérimental, développé dans un cadre pédagogique. 
 Il n'est pas publié sur le dépôt officiel des extensions QGIS : il ne se trouve donc pas dans Extensions ▸ Installer/Gérer les extensions ▸ Tout. Il s'installe manuellement (voir ci-dessous).
 
 Récupérer le code sur la page GitHub du dépôt ou cloner le dépôt avec git clone.
