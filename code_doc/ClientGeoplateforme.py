@@ -32,6 +32,8 @@ class ClientGeoplateforme:
         """
 
         response = requests.get(self.URL_ISOCHRONE, params=params.toDict(), timeout=10)
+        if response.status_code in (502, 503, 504):
+            raise ValueError("Le service de la Géoplateforme ne répond pas pour le moment. Réessayez plus tard.")
         if not response.ok:
             print(response.status_code, response.text)
         response.raise_for_status()

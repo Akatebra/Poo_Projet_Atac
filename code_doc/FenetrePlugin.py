@@ -2,9 +2,16 @@ import sys
 import requests  
 
 try:
-    from qgis.core import QgsProject
+    from qgis.core import QgsProject, QgsCoordinateReferenceSystem, QgsCoordinateTransform
+    from qgis.gui import QgsMapToolEmitPoint, QgsVertexMarker
+    from qgis.PyQt.QtGui import QColor
 except ImportError:
     QgsProject = None
+    QgsCoordinateReferenceSystem = None
+    QgsCoordinateTransform = None
+    QgsMapToolEmitPoint = None
+    QgsVertexMarker = None
+    QColor = None
 
 try:
     from qgis.PyQt.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
@@ -22,11 +29,14 @@ class FenetrePlugin(QWidget):
     Classe représentant la fenêtre du plugin QGIS-Isochrone. 
     Cette fenêtre permet à l'utilisateur de saisir les paramètres nécessaires pour calculer les isochrones.
     """
-    def __init__(self):
+    def __init__(self, iface=None):
         """
         Initialise la fenêtre du plugin et configure l'interface utilisateur.
         """
         super().__init__()
+        self.iface = iface
+        self.outil = None
+        self.marqueur = None
         self.initUI()
 
     def initUI(self):
@@ -35,7 +45,7 @@ class FenetrePlugin(QWidget):
         Crée les champs de saisie pour les paramètres importants.
         Crée les boutons pour sélectionner un point et lancer le calcul.
         """
-        self.setWindowTitle("Plugin QGIS-Isochrone")
+        self.setWindowTitle("Calcul-Isochrone")
         self.resize(800,500)
         self.move(30,200)
 
@@ -54,9 +64,6 @@ class FenetrePlugin(QWidget):
             ressources = ClientGeoplateforme.RESSOURCES_DOCUMENTEES
         self.resourceBox.addItems(ressources)
         self.resourceBox.setCurrentText("bdtopo-valhalla")
-       
-
-
         
         self.costTypeBox = QComboBox()
         self.costTypeBox.addItems(["time", "distance"])
@@ -79,8 +86,41 @@ class FenetrePlugin(QWidget):
         
 
     def select_point(self):
-       
-        print("Point sélectionné")
+        """
+
+        """
+        if self.iface is None or QgsMapToolEmitPoint is None:
+            QMessageBox.information(self, "Info", "La sélection sur la carte n'est possible que dans QGIS.")
+            return
+        canvas = self.iface.mapCanvas()
+        if self.outil is None:
+            self.outil = QgsMapToolEmitPoint(canvas)
+            self.outil.canvasClicked.connect(self.point_clique)
+        canvas.setMapTool(self.outil)
+        self.iface.messageBar().pushMessage(
+            "Isochrone", "Cliquez sur la carte pour choisir le point de départ.", duration=5)
+        self.hide()
+
+
+    def point_clique(self, point, bouton):
+        """
+        """
+
+        canvas = self.iface.mapCanvas()
+        crs_carte = canvas.mapSettings().destinationCrs()
+        crs_service = QgsCoordinateReferenceSystem("EPSG:4326")
+        transformation = QgsCoordinateTransform(crs_carte, crs_service, QgsProject.instance())
+        point_lonlat = transformation.transform(point)
+    
+        self.lonEdit.setText(f"{point_lonlat.x():.6f}")
+        self.latEdit.setText(f"{point_lonlat.y():.6f}")
+    
+        canvas.unsetMapTool(self.outil)
+        self.afficher_marqueur(point)
+        self.show()
+        self.raise_()
+        self.activateWindow()
+    
 
 
     def lancer_calcul(self):
@@ -108,8 +148,8 @@ class FenetrePlugin(QWidget):
         if not (-90 <= lat <= 90):
             QMessageBox.warning(self, "Erreur", "La latitude doit être comprise entre -90 et 90.")
             return
-        if costValue <= 0:
-            QMessageBox.warning(self, "Erreur", "La valeur du coût doit être positive.")
+        if not (0 < costValue <= 50000):
+            QMessageBox.warning(self, "Erreur", "La valeur du coût doit être comprise entre 0 et 50000.")
             return
 
         resource = self.resourceBox.currentText()
@@ -127,10 +167,41 @@ class FenetrePlugin(QWidget):
 
         if QgsProject is not None:
             QgsProject.instance().addMapLayer(resultat.creer_couche())
+            QgsProject.instance().addMapLayer(point.creer_couche())
+            self.effacer_marqueur()
 
         QMessageBox.information(self, "Résultat", f"Isochrone calculée : {resultat.nombre_points()} points.")
 
-         
+
+    def reinitialiser(self):
+        """Remet les champs de la fenêtre à leur état initial."""
+        self.lonEdit.clear()
+        self.latEdit.clear()
+        self.costValueEdit.clear()
+        self.costTypeBox.setCurrentIndex(0)
+        self.resourceBox.setCurrentText("bdtopo-valhalla")
+        self.effacer_marqueur()
+
+    def closeEvent(self, event):
+        """Appelée quand l'utilisateur ferme la fenêtre : on remet tout à zéro."""
+        self.reinitialiser()
+        super().closeEvent(event)
+
+
+    def afficher_marqueur(self, point):
+        """Affiche une croix rouge sur la carte à l'endroit du point cliqué."""
+        self.effacer_marqueur()
+        self.marqueur = QgsVertexMarker(self.iface.mapCanvas())
+        self.marqueur.setCenter(point)
+        self.marqueur.setColor(QColor(255, 0, 0))
+        self.marqueur.setIconSize(15)
+        self.marqueur.setPenWidth(3)
+
+    def effacer_marqueur(self):
+        """Retire la croix de la carte si elle existe."""
+        if self.marqueur is not None:
+            self.iface.mapCanvas().scene().removeItem(self.marqueur)
+            self.marqueur = None
 
 
 if __name__ == "__main__":

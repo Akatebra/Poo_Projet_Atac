@@ -25,7 +25,8 @@ class IsochronePlugin:
 
     def ouvrir_fenetre(self):
         if self.fenetre is None:
-            self.fenetre = FenetrePlugin()
+            self.fenetre = FenetrePlugin(self.iface)
         self.fenetre.show()
         self.fenetre.raise_()
         self.fenetre.activateWindow()
+        
