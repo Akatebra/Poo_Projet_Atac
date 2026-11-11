@@ -67,7 +67,7 @@ PyQGIS
 
 #### Pour avoir plus d'informations sur les notions, veuillez lire le Wiki, Merci!!!
 
-Auteur : Ange-Christelle Aka - projet Poo, Géodata Paris.
+Auteur : Ange-Christelle Aka - projet Poo, Etudiante en 3ème année PPMD Géodata Paris.
 
 
 
