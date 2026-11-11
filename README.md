@@ -7,12 +7,12 @@ Statut : plugin expérimental, développé dans un cadre pédagogique.
 Il n'est pas publié sur le dépôt officiel des extensions QGIS : il ne se trouve donc pas dans Extensions ▸ Installer/Gérer les extensions ▸ Tout. Il s'installe manuellement (voir ci-dessous).
 
 Récupérer le code sur la page GitHub du dépôt ou cloner le dépôt avec git clone.
-
 Ouvrir le dossier des extensions de QGIS : dans QGIS, menu Préférences ▸ Profils utilisateur ▸ Ouvrir le dossier du profil actif, puis aller dans le dossier python, puis plugins.
 Créer le dossier du plugin : dans plugins, créer un dossier nommé exactement isochrone_geoplateforme (sans espace, sans accent, sans tiret).
 Copier les fichiers du plugin directement dans ce dossier (pas dans un sous-dossier) :
 
    isochrone_geoplateforme/
+   
    ├── __init__.py
    
    ├── metadata.txt
