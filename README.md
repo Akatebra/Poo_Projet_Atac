@@ -1,4 +1,4 @@
-# Poo_Projet_Atac
+# Plugin QGIS de calcul d'isochrones 
 Plugin QGIS qui interroge le service de calcul d'isochrones / isodistances de la Géoplateforme (IGN) et affiche le résultat dans l'interface cartographique de QGIS.
 
 L'objectif de ce projet est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
