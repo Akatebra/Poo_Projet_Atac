@@ -1,4 +1,4 @@
-### Poo_Projet_Atac
+# Poo_Projet_Atac
 Plugin QGIS qui interroge le service de calcul d'isochrones / isodistances de la Géoplateforme (IGN) et affiche le résultat dans l'interface cartographique de QGIS.
 
 L'objectif de ce projet est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
@@ -9,6 +9,7 @@ Récupérer le code sur la page GitHub du dépôt ou cloner le dépôt avec git 
 Ouvrir le dossier des extensions de QGIS : dans QGIS, menu Préférences ▸ Profils utilisateur ▸ Ouvrir le dossier du profil actif, puis aller dans le dossier python, puis plugins.
 Créer le dossier du plugin : dans plugins, créer un dossier nommé exactement isochrone_geoplateforme (sans espace, sans accent, sans tiret).
 Copier les fichiers du plugin directement dans ce dossier (pas dans un sous-dossier) :
+
    isochrone_geoplateforme/
    ├── __init__.py
    ├── metadata.txt
@@ -18,6 +19,7 @@ Copier les fichiers du plugin directement dans ce dossier (pas dans un sous-doss
    ├── ParametresIsochrone.py
    ├── ResultatIsochrone.py
    └── Point.py
+   
 Redémarrer QGIS.
 Activer le plugin : Extensions ▸ Installer/Gérer les extensions ▸ Installées, puis cocher Isochrones Géoplateforme.
 
@@ -33,23 +35,23 @@ Aucune installation de bibliothèque supplémentaire : requests, PyQt et PyQGIS 
 Version QGIS utilise: 
 <img width="695" height="368" alt="Version_QGIS" src="https://github.com/user-attachments/assets/f5160f30-4dc0-4e8f-be39-812454fec185" />
 
-# Utilisation
+### Utilisation
 Ouvrir le menu Extensions ▸ Calculer Isochrone.
 Renseigner le point de départ : saisir longitude et latitude, ou cliquer sur Sélectionner un point puis cliquer sur la carte.
 Choisir la ressource, le type de coût (time en secondes, distance en mètres) et sa valeur (maximum 50 000).
 Cliquer sur Lancer le calcul. L'isochrone et le point de départ s'ajoutent à la carte.
 
-# remarques: 
+### remarques: 
 Le point de départ est toujours envoyé au service en EPSG:4326, quel que soit le système de coordonnées du projet.
 Les points hors de la zone couverte par la ressource provoquent une erreur du service.
 
 
-# Liste des diagrammes :
+### Liste des diagrammes :
 Diagramme de cas d'utilisation
 Diagramme de classes
 Diagramme d'activité ou de séquence
 
-# Bibliothèques utilisées :
+### Bibliothèques utilisées :
 requests,
 PyQt,
 PyQGIS
