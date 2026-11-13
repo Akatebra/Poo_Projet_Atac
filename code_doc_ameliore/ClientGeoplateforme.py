@@ -1,9 +1,30 @@
+"""Module ClientGeoplateforme : communication avec le service de navigation de la Géoplateforme."""
+
 import requests
 from ParametresIsochrone import ParametresIsochrone 
 from Point import Point
 from ResultatIsochrone import ResultatIsochrone
 
 class ClientGeoplateforme:
+    """
+    Client du service de navigation de la Géoplateforme (IGN).
+
+    Permet de lire les capacités du service (ressources, paramètres possibles)
+    et de lancer un calcul d'isochrone avec la bibliothèque requests.
+
+    Attributes
+    ----------
+    URL_CAPABILITIES : str
+        Adresse du getCapabilities du service.
+    URL_ISOCHRONE : str
+        Adresse du calcul d'isochrone.
+    RESSOURCES_DOCUMENTEES : list of str
+        Ressources documentées par l'IGN, les seules proposées par le plugin 
+        car ceux etant disponible pour la calcul.
+    OPTIONS_PAR_DEFAUT : dict
+        Valeurs possibles des paramètres facultatifs, utilisées si getCapabilities
+        est inaccessible.
+    """
     URL_CAPABILITIES = "https://data.geopf.fr/navigation/getcapabilities"
     URL_ISOCHRONE = "https://data.geopf.fr/navigation/isochrone"
     RESSOURCES_DOCUMENTEES = ["bdtopo-valhalla", "bdtopo-pgr"]
@@ -18,39 +39,61 @@ class ClientGeoplateforme:
 
 
     def __init__(self):
+        """Crée le client. get_capabilities sera gardé en mémoire après le premier appel."""
         self._capacites= None
 
 
     def get_capabilities(self): 
         """
-              Récupère les capacités de l'API Geopf.
-                     
-                Returns:
-               dict: La réponse de l'API sous forme de dictionnaire.       
-              """
+        Récupère les capacités de l'API Géoplateforme.
+
+        La réponse est gardée en mémoire : le service n'est interrogé
+        qu'une seule fois par client.
+
+        Returns
+        -------
+        dict
+            La réponse de l'API sous forme de dictionnaire.
+
+        Raises
+        ------
+        requests.exceptions.RequestException
+            Si le service est inaccessible ou renvoie une erreur HTTP.
+        """
         if self._capacites is None:
             response = requests.get(self.URL_CAPABILITIES, timeout=10)
             response.raise_for_status()
             self._capacites = response.json()
         return self._capacites
+
        
     def calcul_isochrone(self, params: ParametresIsochrone):
         """
-        Envoie une requête à l'API Geopf pour calculer les isochrones en utilisant les paramètres fournis.
+        Envoie une requête au service pour calculer une isochrone.
 
-        parameters:
-            params (ParametresIsochrone): Les paramètres nécessaires pour le calcul des isochrones.
-        Returns:
-            ResultatIsochrone : le résultat du calcul.
+        Parameters
+        ----------
+        params : ParametresIsochrone
+            Les paramètres nécessaires au calcul.
+
+        Returns
+        -------
+        ResultatIsochrone
+            Le résultat du calcul.
+
+        Raises
+        ------
+        ValueError
+            Si le service est indisponible (502, 503, 504) ou ne renvoie pas de géométrie.
+        requests.exceptions.RequestException
+            Pour les autres erreurs de communication ou erreurs HTTP.
         """
-
         response = requests.get(self.URL_ISOCHRONE, params=params.toDict(), timeout=10)
-        if response.status_code in (502, 503, 504):
+        if response.status_code in (502, 503, 504):   # 502, 503, 504 : erreurs de passerelle, le service est indisponible
             raise ValueError("Le service de la Géoplateforme ne répond pas pour le moment. Réessayez plus tard.")
         if not response.ok:
-            print(response.status_code, response.text)
+            print(response.status_code, response.text)    # affiche le message d'erreur du service
         response.raise_for_status()
-
         reponse = response.json()
         if "geometry" not in reponse:
             print(reponse)
@@ -59,7 +102,15 @@ class ClientGeoplateforme:
    
 
     def get_ressources_isochrone(self):
-        """Renvoie la liste des noms de ressources qui permettent le calcul d'isochrone."""
+        """
+        Renvoie les ressources qui permettent le calcul d'isochrone
+        (parmi celles documentées par l'IGN).
+
+        Returns
+        -------
+        list of str
+            Les noms des ressources.
+        """
         capacites = self.get_capabilities()
         noms = []
         for r in capacites["resources"]:
@@ -71,8 +122,19 @@ class ClientGeoplateforme:
 
     def get_options_isochrone(self, resource):
         """
-        Renvoie les valeurs possibles de chaque paramètre pour une ressource,
-        lues dans getCapabilities. Renvoie un dictionnaire : {nom du paramètre: [valeurs]}.
+        Renvoie les valeurs possibles de chaque paramètre d'isochrone pour une ressource,
+        lues dans getCapabilities.
+
+        Parameters
+        ----------
+        resource : str
+            Nom de la ressource, par exemple "bdtopo-valhalla".
+
+        Returns
+        -------
+        dict
+            {nom du paramètre : liste des valeurs possibles}, pour les paramètres
+            qui ont une liste de choix (profile, direction, geometryFormat, etc.).
         """
         options = {}
         capacites = self.get_capabilities()
